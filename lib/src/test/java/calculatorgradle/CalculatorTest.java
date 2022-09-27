@@ -63,13 +63,6 @@ class CalculatorTest {
 	}
 	
 	@ParameterizedTest
-	@ValueSource(ints= {12,14,11,19})
-	void testCheckEven(int x)
-	{
-		boolean res=obj.checkEven(x);
-		Assertions.assertTrue(res);
-	}
-	@ParameterizedTest
     @MethodSource("numberprovider")
     void testAdd(int a,int b) {
         int expected=a+b;
